@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GastroTEC</string>
+    <string name="Enter">Ir</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="Username">Usuario</string>
+    <string name="Password">Clave</string>
+    <string name="Name">Nombre</string>
+    <string name="Ape1">Apellido</string>
+    <string name="Ape2">Apellido</string>
+    <string name="ID">Carne</string>
+    <string name="email">Email</string>
+    <string name="Add">Aceptar</string>
+    <string name="register">Registrarse</string>
+    <string name="ape1">Primer Apellido</string>
+    <string name="ape2">Segundo Apellido</string>
+    <string name="Location">Direccion</string>
+    <string name="Horario">Horario</string>
+    <string name="edit">Editar</string>
+    <string name="Curso">Carrera</string>
+    <string name="logout">Salir</string>
+</resources>
