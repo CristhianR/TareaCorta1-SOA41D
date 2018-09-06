@@ -2,20 +2,15 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.kiel.gastrotec.R;
 import com.example.kiel.gastrotec.models.HorarioPlatillo;
-import com.example.kiel.gastrotec.models.Restaurante;
 import com.example.kiel.gastrotec.sqlite.MenuDB;
 
 import java.util.ArrayList;
@@ -89,6 +84,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 horarios[i] = "";
             }
         }
+
         String[] schedules = new String[count];
         count = 0;
         for(int i = 0; i < horarios.length; i++){

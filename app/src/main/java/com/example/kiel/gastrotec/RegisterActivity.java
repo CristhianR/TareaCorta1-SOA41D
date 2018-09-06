@@ -2,8 +2,8 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +14,7 @@ import com.example.kiel.gastrotec.models.Clientes;
 import com.example.kiel.gastrotec.sqlite.MenuDB;
 
 public class RegisterActivity extends AppCompatActivity {
+
     private EditText mUserName;
     private EditText mUserApe1;
     private EditText mUserApe2;
@@ -22,15 +23,12 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mUserEmail;
     private EditText mUserPassword;
 
-
     private Button mAccept;
     private Button mCancel;
 
     private Bundle mBundle;
 
     MenuDB db; //Base de datos
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.d("ValoresREGISTER", "Cliente: " + array);
 
                 long clientID = db.createCliente(cliente);
-                //String clave  = db.getCliente(cliente.getmIdCliente()).getmPassword();
-                Toast toast1 = Toast.makeText(context,"¡Registrado!" + cliente.getmNomCliente(), Toast.LENGTH_SHORT);
+                Toast toast1 = Toast.makeText(context,"¡Registrado!", Toast.LENGTH_SHORT);
                 toast1.show();
 
                 db.closeDB(); // Cerrando la conexión a la base de datos.

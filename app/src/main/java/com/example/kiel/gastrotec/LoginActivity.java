@@ -2,24 +2,17 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-// Importando paquetes por utilizar.
-import com.example.kiel.gastrotec.models.Clientes;
-import com.example.kiel.gastrotec.models.HorarioPlatillo;
-import com.example.kiel.gastrotec.models.Menu;
-import com.example.kiel.gastrotec.models.Platillo;
-import com.example.kiel.gastrotec.models.Restaurante;
-import com.example.kiel.gastrotec.sqlite.MenuDB; // Base de datos.
-
+import com.example.kiel.gastrotec.sqlite.MenuDB;
 
 public class LoginActivity extends AppCompatActivity {
+
     private EditText mUsername;
     private EditText mPassword;
 
@@ -47,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
 
         db = new MenuDB(getApplicationContext());
 
-
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,9 +59,6 @@ public class LoginActivity extends AppCompatActivity {
                 long id = Integer.valueOf(ID);
 
                 String clave  = db.getCliente(id).getmPassword();
-
-                //String array = "[" + restaurante.getmIdRest() + ", " + restaurante.getmNomRest() + ", " + restaurante.getmLocRest() + ", " + restaurante.getmHorarioRest() + "] ";
-                //Log.d("ValoresREGISTER", "Cliente: " + array);
 
                 if(clave.equals(pw)){
 

@@ -2,11 +2,10 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,7 +17,6 @@ import com.example.kiel.gastrotec.models.Platillo;
 import com.example.kiel.gastrotec.models.Restaurante;
 import com.example.kiel.gastrotec.sqlite.MenuDB;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EditRestaurantActivity extends AppCompatActivity {
@@ -62,7 +60,6 @@ public class EditRestaurantActivity extends AppCompatActivity {
         mHorarioServicio = (EditText) findViewById(R.id.editTextHorMenuEditRestaurantAcitvity);
         mNomPlatillo = (EditText) findViewById(R.id.editTextNamePlatilloEditRestaurantActivity);
         mHorPlatillo = (EditText) findViewById(R.id.editTextHorPlatilloEditRestaurantActivity);
-
 
         mNomRestView = (TextView) findViewById(R.id.textViewRestNameEditRestaurantAcitvity);
         mLocRestView = (TextView) findViewById(R.id.textViewRestLocEditRestaurantAcitvity);

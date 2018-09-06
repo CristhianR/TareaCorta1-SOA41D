@@ -2,8 +2,8 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.example.kiel.gastrotec.models.Menu;
 import com.example.kiel.gastrotec.models.Platillo;
-import com.example.kiel.gastrotec.models.Restaurante;
 import com.example.kiel.gastrotec.sqlite.MenuDB;
 
 import java.util.ArrayList;
@@ -58,7 +57,6 @@ public class PlatillosActivity extends AppCompatActivity {
         mRestID = getIntent().getStringExtra("idRest");
         mServID = getIntent().getStringExtra("idServ");
 
-
         List<Platillo> platillos = db.getPlatillos();
         List<Menu> menus = db.getMenus();
         final String[] arrayPlatillos = new String[platillos.size()];
@@ -93,6 +91,7 @@ public class PlatillosActivity extends AppCompatActivity {
                 count += 1;
             }
         }
+
         count = 0;
         for(int i = 0; i < platillos.size(); i++){
             mNomPlatillo = platillos.get(i).getmNombrePlatillo();
@@ -111,6 +110,7 @@ public class PlatillosActivity extends AppCompatActivity {
                 arrayPlatillos[i] = "X";
             }
         }
+
         String[] platillosList = new String[count];
         count = 0;
         for(int i = 0; i < arrayPlatillos.length; i++){
@@ -146,8 +146,6 @@ public class PlatillosActivity extends AppCompatActivity {
                 mBundle.putString("idPlatillo", mPlatilloID);
 
                 intent.putExtras(mBundle);
-
-                //startActivity(intent);
             }
         });
     }

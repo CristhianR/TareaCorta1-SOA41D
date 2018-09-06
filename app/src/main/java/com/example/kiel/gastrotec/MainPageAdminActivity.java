@@ -2,15 +2,14 @@ package com.example.kiel.gastrotec;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.kiel.gastrotec.models.Restaurante;
 import com.example.kiel.gastrotec.sqlite.MenuDB;
@@ -56,7 +55,6 @@ public class MainPageAdminActivity extends AppCompatActivity {
 
         mUserID = getIntent().getStringExtra("idUser");
 
-
         String name = db.getCliente(Integer.valueOf(mUserID)).getmNomCliente();
         String ap1 = db.getCliente(Integer.valueOf(mUserID)).getmApe1();
         String ap2 = db.getCliente(Integer.valueOf(mUserID)).getmApe2();
@@ -92,9 +90,6 @@ public class MainPageAdminActivity extends AppCompatActivity {
                 mBundle.putString("idRest", mRestID);
 
                 intent.putExtras(mBundle);
-
-                //Toast toast1 = Toast.makeText(context,mRestID, Toast.LENGTH_SHORT);
-                //toast1.show();
 
                 startActivity(intent);
             }
